@@ -8,8 +8,12 @@ fn main() -> anyhow::Result<()> {
     let mut stdout = io::stdout();
     let project = prompt("What is your project about?", &stdin, &mut stdout)?;
 
-    let project_in_esperanto = translate(&project, "en", "eo")?;
-    println!("{}", project_in_esperanto);
+    let synonyms = thesaurus::synonym(&project).map_or_else(|_| Vec::new(), |d| d.synonyms);
+
+    for word in synonyms.into_iter().chain(std::iter::once(project)) {
+        let in_esperanto = translate(&word, "en", "eo")?;
+        println!("{}", in_esperanto);
+    }
 
     Ok(())
 }
