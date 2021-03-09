@@ -1,3 +1,5 @@
+// Code mostly taken from https://github.com/ksk001100/gtrans
+
 pub(crate) fn translate(query: &str, source: &str, target: &str) -> anyhow::Result<String> {
     let url = generate_url(query, source, target);
     let body = reqwest::blocking::get(&url)?.text()?;
