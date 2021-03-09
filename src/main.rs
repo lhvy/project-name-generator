@@ -12,7 +12,7 @@ fn main() -> anyhow::Result<()> {
 
     for word in synonyms.into_iter().chain(std::iter::once(project)) {
         let in_esperanto = translate(&word, "en", "eo")?;
-        println!("{}", in_esperanto);
+        println!("{}", any_ascii::any_ascii(&in_esperanto));
     }
 
     Ok(())
