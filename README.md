@@ -6,4 +6,4 @@
 
 ### Contributors
 
-This project maintained by [CookieCoder15](https://github.com/CookieCoder15) and [arzg](https://github.com/arzg); any other contributions via PRs are welcome! Forks and modifications are implicitly dual-licensed under Apache 2.0 OR MIT. Please credit the above contributers making modifications.
+This project maintained by [lhvy](https://github.com/lhvy) and [arzg](https://github.com/arzg); any other contributions via PRs are welcome! Forks and modifications are implicitly dual-licensed under Apache 2.0 OR MIT. Please credit the above contributers making modifications.
