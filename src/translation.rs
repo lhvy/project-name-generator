@@ -4,6 +4,10 @@ pub(crate) fn translate(query: &str, source: &str, target: &str) -> anyhow::Resu
     let url = generate_url(query, source, target);
     let body = reqwest::blocking::get(&url)?.text()?;
 
+    if body.contains("Our systems have detected unusual traffic from your computer network") {
+        anyhow::bail!("Google blocked this IP from making more requests for a while");
+    }
+
     let v = serde_json::from_str::<Vec<serde_json::Value>>(&body)?;
 
     v.first()
