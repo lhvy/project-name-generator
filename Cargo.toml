@@ -1,5 +1,5 @@
 [package]
-authors = ["Aramis Razzaghipour <aramisnoah@gmail.com>", "lhvy <cookiecoder15@gmail.com>"]
+authors = ["Aramis Razzaghipour <aramisnoah@gmail.com>", "lhvy <me@lhvy.dev>"]
 edition = "2018"
 license = "MIT OR Apache-2.0"
 name = "project-name-generator"
